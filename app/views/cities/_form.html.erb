@@ -1,0 +1,41 @@
+<%= form_for(@city) do |f| %>
+  <% if @city.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@city.errors.count, "error") %> prohibited this city from being saved:</h2>
+
+      <ul>
+      <% @city.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :gold %><br />
+    <%= f.number_field :gold %>
+  </div>
+  <div class="field">
+    <%= f.label :food %><br />
+    <%= f.number_field :food %>
+  </div>
+  <div class="field">
+    <%= f.label :population %><br />
+    <%= f.number_field :population %>
+  </div>
+  <div class="field">
+    <%= f.label :tax %><br />
+    <%= f.text_field :tax %>
+  </div>
+  <div class="field">
+    <%= f.label :is_capital %><br />
+    <%= f.check_box :is_capital %>
+  </div>
+  <div class="field">
+    <%= f.label :coordinate %><br />
+    <%= f.text_field :coordinate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gold:</b>
+  <%= @city.gold %>
+</p>
+
+<p>
+  <b>Food:</b>
+  <%= @city.food %>
+</p>
+
+<p>
+  <b>Population:</b>
+  <%= @city.population %>
+</p>
+
+<p>
+  <b>Tax:</b>
+  <%= @city.tax %>
+</p>
+
+<p>
+  <b>Is capital:</b>
+  <%= @city.is_capital %>
+</p>
+
+<p>
+  <b>Coordinate:</b>
+  <%= @city.coordinate %>
+</p>
+
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>

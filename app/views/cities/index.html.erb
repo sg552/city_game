@@ -1,0 +1,33 @@
+<h1>Listing cities</h1>
+
+<table>
+  <tr>
+    <th>Gold</th>
+    <th>Food</th>
+    <th>Population</th>
+    <th>Tax</th>
+    <th>Is capital</th>
+    <th>Coordinate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cities.each do |city| %>
+  <tr>
+    <td><%= city.gold %></td>
+    <td><%= city.food %></td>
+    <td><%= city.population %></td>
+    <td><%= city.tax %></td>
+    <td><%= city.is_capital %></td>
+    <td><%= city.coordinate %></td>
+    <td><%= link_to 'Show', city %></td>
+    <td><%= link_to 'Edit', edit_city_path(city) %></td>
+    <td><%= link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New City', new_city_path %>
