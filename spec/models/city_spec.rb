@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe City do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @user = create(:user)
+    @city = create(:city)
+    @city.user = @user
+  end
+  it "should belong to user" do
+    @city.user.should == @user
+  end
 end
